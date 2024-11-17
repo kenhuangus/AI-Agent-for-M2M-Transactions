@@ -64,65 +64,6 @@ Provides the immutable foundation for recording transactions and maintaining sys
 
 ## Components
 
-flowchart TB
-    subgraph "Identity Layer"
-        DID[Decentralized Identity]
-        VC[Verifiable Credentials]
-    end
-
-    subgraph "AI Agent Layer"
-        AIM[Identity Manager]
-        AIT[Transaction Optimizer]
-        AIS[Security Monitor]
-    end
-
-    subgraph "Smart Contract Layer"
-        SC[Smart Contract]
-        ST[Contract Templates]
-        SL[Contract Logic]
-    end
-
-    subgraph "Blockchain Layer"
-        BL[Ledger]
-        BC[Consensus]
-        BT[Transaction Record]
-    end
-
-    M1[Machine 1] --> DID
-    M2[Machine 2] --> DID
-    
-    DID --> VC
-    VC --> AIM
-    
-    AIM --> AIT
-    AIT --> AIS
-    
-    AIT --> ST
-    ST --> SC
-    SC --> SL
-    
-    AIS --> SC
-    
-    SC --> BC
-    BC --> BL
-    BL --> BT
-    
-    BT --> AIT
-    
-    %% Define styles
-    classDef machine fill:#f96,stroke:#333,stroke-width:2px
-    classDef identity fill:#58f,stroke:#333,stroke-width:2px
-    classDef ai fill:#5f5,stroke:#333,stroke-width:2px
-    classDef smart fill:#f5f,stroke:#333,stroke-width:2px
-    classDef blockchain fill:#ff5,stroke:#333,stroke-width:2px
-    
-    %% Apply styles
-    class M1,M2 machine
-    class DID,VC identity
-    class AIM,AIT,AIS ai
-    class SC,ST,SL smart
-    class BL,BC,BT blockchain
-    
 ### 1. Web Interface (Streamlit)
 The Streamlit application provides a user-friendly interface for:
 
@@ -208,6 +149,68 @@ streamlit run src/ui.py
 ## System Design
 
 ### Transaction Flow
+
+
+```mermaid
+flowchart TB
+    subgraph "Identity Layer"
+        DID[Decentralized Identity]
+        VC[Verifiable Credentials]
+    end
+
+    subgraph "AI Agent Layer"
+        AIM[Identity Manager]
+        AIT[Transaction Optimizer]
+        AIS[Security Monitor]
+    end
+
+    subgraph "Smart Contract Layer"
+        SC[Smart Contract]
+        ST[Contract Templates]
+        SL[Contract Logic]
+    end
+
+    subgraph "Blockchain Layer"
+        BL[Ledger]
+        BC[Consensus]
+        BT[Transaction Record]
+    end
+
+    M1[Machine 1] --> DID
+    M2[Machine 2] --> DID
+    
+    DID --> VC
+    VC --> AIM
+    
+    AIM --> AIT
+    AIT --> AIS
+    
+    AIT --> ST
+    ST --> SC
+    SC --> SL
+    
+    AIS --> SC
+    
+    SC --> BC
+    BC --> BL
+    BL --> BT
+    
+    BT --> AIT
+    
+    %% Define styles
+    classDef machine fill:#f96,stroke:#333,stroke-width:2px
+    classDef identity fill:#58f,stroke:#333,stroke-width:2px
+    classDef ai fill:#5f5,stroke:#333,stroke-width:2px
+    classDef smart fill:#f5f,stroke:#333,stroke-width:2px
+    classDef blockchain fill:#ff5,stroke:#333,stroke-width:2px
+    
+    %% Apply styles
+    class M1,M2 machine
+    class DID,VC identity
+    class AIM,AIT,AIS ai
+    class SC,ST,SL smart
+    class BL,BC,BT blockchain
+```    
 
 1. **Identity Verification**:
    - Machine presents DID
