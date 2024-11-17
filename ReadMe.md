@@ -1,4 +1,4 @@
-# AI-Powered M2M Transaction System
+# GenAI Agent Powered M2M Transaction System
 
 ## Overview
 This project implements a modern Machine-to-Machine (M2M) transaction system powered by AI Agents, Blockchain, and Decentralized Identity (DID). The system demonstrates how autonomous machines can securely interact, execute transactions, and maintain verifiable identities in a decentralized ecosystem.
@@ -253,11 +253,12 @@ flowchart TB
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License 
 
 ## Contact
 
-Ken Huang - [@Linkedin]https://www.linkedin.com/in/kenhuang8/)
+Ken Huang - [@Linkedin]https://www.linkedin.com/in/kenhuang8/)]
+
 Project Link: [https://github.com/yourusername/m2m-transaction-system](https://github.com/yourusername/m2m-transaction-system)
 
 ## Acknowledgments
